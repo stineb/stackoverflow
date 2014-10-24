@@ -1,0 +1,17 @@
+# select compiler
+FCOM=gfortran
+
+# name of executable
+EXE = hello
+
+standard: 
+	$(FCOM) -c words_schleppe.mod.F
+	$(FCOM) -c words_schnuppi.mod.F
+	$(FCOM) -c schleppe.F
+	$(FCOM) -c schnuppi.F
+	$(FCOM) words_schleppe.mod.o words_schnuppi.mod.o schleppe.o schnuppi.o sayhello.F -o $(EXE)
+
+.PHONY: clean
+clean:
+	rm $(EXE) *.o *.mod
+
