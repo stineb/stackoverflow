@@ -1,4 +1,4 @@
-FCOM=pgf90
+FCOM=pgf95
 CPPFLAGS=-E
 COMPFLAGS=-Mextend
 EXE=hello
@@ -23,5 +23,5 @@ $(OBJS): %.o: %.for
 # clean: remove .for, .o, .do, and .stb files
 .PHONY: clean
 clean:
-	-rm -f *.for *.o *.stb
+	-rm -f *.for *.o *.stb *.mod
 

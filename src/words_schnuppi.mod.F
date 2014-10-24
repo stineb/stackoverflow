@@ -2,6 +2,6 @@
 
       implicit none 
 
-      character*10,parameter :: schnuppi_content
+      character*10,parameter :: schnuppi_content="Hey du."
 
       end module words_schnuppi
